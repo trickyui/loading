@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TrickyUI - Loading</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box
+        }
+
+        .wrapper {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .window {
+            display: flex;
+            height: 50vh;
+            background: #ffffff;
+            position: relative;
+            align-items: flex-end;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            z-index: 2;
+        }
+
+
+
+        .window span {
+            font-family: 'Roboto', sans-serif;
+            font-size: 200px;
+            font-weight: 900;
+            line-height: 140px;
+            color: #ffffff;
+            position: relative;
+            animation: animate 4s linear infinite;
+        }
+
+        .window:nth-child(1) span {
+            color: #031927;
+        }
+
+        .window:nth-child(2) {
+            background: #031927;
+            align-items: flex-start;
+            z-index: 1;
+        }
+
+        .window:nth-child(2) span {
+            top: -140px;
+        }
+
+        @keyframes animate {
+
+            0%{
+                transform: rotate(0deg);
+            }
+
+            25% {
+                transform: rotate(-15deg);
+            }
+
+            75% {
+                transform: rotate(15deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="window">
+            <span>LOADING...</span>
+        </div>
+        <div class="window">
+            <span>LOADING...</span>
+        </div>
+    </div>
+
+</body>
+
+</html>
